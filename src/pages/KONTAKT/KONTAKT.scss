@@ -1,0 +1,101 @@
+@import "../../component/variables/variables.scss";
+
+
+.contact {
+    width: 100%;
+    height: calc(100vh - 136px);
+    padding-top: 40px;
+    .about {
+        .name {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .title {
+            text-transform: capitalize;
+            color: #666;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        img {
+            width: 268px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .description {
+            color: #333;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .about {
+           text-align: center;
+        }
+    }
+    //////
+/// contact-section
+/////
+
+.contact-section {
+    padding: $main_padding;
+    text-align: center;
+    .parent-contact {
+     width: 100%;
+     text-align: center;
+       
+        .serviecs-contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            .icon {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color_light_blue;
+                border-radius: 50%;
+                svg {
+                    font-size: 18px;
+                }
+            }
+            .title {
+                a {
+                    color: $color_dark;
+                    text-transform: capitalize;
+                    margin-top: 10px;
+                    text-decoration: none;
+                }
+            }
+
+        }
+        .about-time {
+            color: #333;
+            margin: 0 0 0 10px ;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+            svg {
+                color: rgb(10, 69, 156);
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                margin-bottom: 2px;
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+
+}
+// @media (max-width: 768px) {
+//    .contact{
+//     padding-top: 20px !important;
+//    }
+// }

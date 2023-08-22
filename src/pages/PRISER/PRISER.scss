@@ -1,0 +1,64 @@
+@import "../../component/variables/variables.scss";
+
+.wrapper-priser {
+   padding: 30px 0 0;
+   width: 100%;
+   .title-top {
+    text-align: start;
+    width: 100%;
+    padding: 10px 0;
+    h3 {
+        text-transform: capitalize;
+        font-size: 23px;
+        color: $color_dark;
+        font-weight: bold;
+    }
+   }
+   .priser-content {
+ 
+   
+        list-style: none;
+        padding: 0;
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+            margin: 15px 0;
+            text-transform: capitalize;
+            box-shadow: 3px 2px 10px 2px #ddd;
+            padding: 10px ;
+            svg {
+                color: $color_light_blue;
+                font-weight: bold;
+            }
+            p {
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+  
+   }
+   .fasta-priser {
+    padding: 15px;
+    -webkit-box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    -moz-box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    border-bottom: 1px solid $color_light_blue ;
+    
+   
+    border-radius: 6px;
+    margin-top: 28px;
+    h3 {
+        text-transform: capitalize;
+        font-weight: bold;
+        color: $color_light_blue;
+    }
+    p {
+        margin-top: 10px;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+    }
+   }
+}

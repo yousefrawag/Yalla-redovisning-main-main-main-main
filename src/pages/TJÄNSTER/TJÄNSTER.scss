@@ -1,0 +1,61 @@
+@import "../../component/variables/variables.scss";
+
+
+//////
+/// wrapper single services
+/////
+
+.wrapper-single-services {
+    padding: $main_padding;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.822), rgba(255, 255, 255, 0.822)), url('../images/neve-freelancer.jpg');
+    background-position: center;
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 137px);
+    height: 100%;
+    .parent-single-content {
+        height: 100%;
+        .serviecs-single-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            
+            .icon {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color_light_blue;
+                border-radius: 50%;
+                svg {
+                    font-size: 25px;
+                }
+            }
+            .title {
+                h4 {
+                    color: $color_dark;
+                    text-transform: capitalize;
+                    margin-top: 10px;
+                }
+            }
+            .description {
+                p {
+                    text-transform: capitalize;
+                    line-height: 1.7;
+                    color: $color_dark_text
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .description p{
+        font-size: 14px !important;
+    }
+}

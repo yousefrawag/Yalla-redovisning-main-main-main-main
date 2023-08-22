@@ -1,0 +1,106 @@
+@import "../variables/variables.scss";
+
+
+.navbar {
+    padding: 20px 0 !important;
+    border-bottom: 1px solid $color_light_blue !important;
+    -webkit-box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    -moz-box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    box-shadow: 6px 2px 52px -27px rgba(0,0,0,0.67);
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        .navbar-brand {
+            font-size: 23px;
+            font-weight: bold;
+            color: $color_dark;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            opacity: 1;
+            margin-top: 3px;
+            &:hover{
+                opacity: 1;
+            }
+            
+        }
+        img{
+            margin-top: 8px;
+            width: 200px;
+            height: 70px;
+           
+        }
+    }
+   
+    .navbar-collapse {
+        justify-content: end;
+        .navbar-nav {
+            gap: 4rem;
+            .nav-link{
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                color: black;
+                position: relative;
+                padding: 0 0 7px;
+                &::after {
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $color_dark_orange;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+                &:hover {
+                    color: $color_dark_orange;
+                    &::after{
+                        width: 100%;
+                        left: 0; 
+                    }
+                 
+                }
+                &.active {
+                    color: $color_dark_orange;
+                    &::after{
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+.navbar-brand{
+    font-size: 17px !important;
+}
+ }
+ @media (min-width: 576px) and (max-width:768px) {
+    .navbar-brand{
+        font-size: 18px !important;
+        
+    }
+     }
+@media screen and (max-width: 768px) {
+.navbar{
+    padding: 18px !important;
+}
+.navbar-light .navbar-toggler{
+    border-color: $color_light_blue !important;
+}
+.navbar{
+    border-bottom: 1px solid $color_light_blue !important;
+}
+}
+
