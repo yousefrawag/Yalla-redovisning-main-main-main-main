@@ -6,7 +6,9 @@ import "./Start.scss";
 import  Fetchservic_start from "../../component/Startdashboard"
 import Loading from "../../component/loading/Loading"
 import React from "react";
+import Fetchservic_hometext from "../../component/Hometext"
 const Start = () => {
+  const {data_hometext , Loadding_hometext} = Fetchservic_hometext()
  const {data_start , Loadding_start} =  Fetchservic_start()
 
   return (
@@ -16,11 +18,14 @@ const Start = () => {
 
 <section className="wrapper-testimonial">
   <div className="container">
-    <div className="testimonial-content">
-      <h2>Trygga lösningar för er ekonomi.</h2>
-      <p>Vinst Redovisning i Jönköping AB erbjuder helhetslösningar och enskilda tjänster inom bokföring, redovisning, rådgivning, lön och konsultationer. </p>
-      <Link to="/Kontakt" className="custom-btn btn-12" > <span>Click!</span><span>KONTAKTA OSS</span></Link>
-    </div>
+  {
+    Loadding_hometext ? <Loading /> : <div className="testimonial-content">
+    <h2>{data_hometext[0].title}</h2>
+    <p>{data_hometext[0].text} </p>
+    <Link to="/Kontakt" className="custom-btn btn-12" > <span>Click!</span><span>KONTAKTA OSS</span></Link>
+  </div>
+  }
+   
   </div>
 </section>
 

@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container">
       <Link className="logo" to="/">
       <img src={`${data_logo[0].img}`} alt="logo"  />
-      <span className="navbar-brand" >Yalla redovisning</span>
+     
         
       </Link>
           
